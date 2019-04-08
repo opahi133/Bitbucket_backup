@@ -1,14 +1,17 @@
 #!/bin/bash
 
 #Bitbucket credentials
-$bbuser = Username_here
-$bbpass = Password_here
-$fname = $(date +%F_%H_%M)
+bbuser= Username_here
+bbpass= Password_here
+fname= $(date +%F_%H_%M)
 backloc="/backups/bitbucket" #backup location
 
 cd $backloc
 
 bitbucket_get_urls () {
+
+#Set access token instead
+
 rm -f bitbucketurls
 curl --user $bbuser:$bbpass https://bitbucket.org/api/1.0/user/repositories > bitbucket.1
 tr , '\n' < bitbucket.1 > bitbucket.2
