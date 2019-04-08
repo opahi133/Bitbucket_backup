@@ -1,9 +1,9 @@
 #!/bin/bash
 
 #Bitbucket credentials
-bbuser='Username_here'
-bbpass='password_here'
-fname=`date +%F_%H_%M`
+$bbuser = Username_here
+$bbpass = Password_here
+$fname = $(date +%F_%H_%M)
 backloc="/backups/bitbucket" #backup location
 
 cd $backloc
